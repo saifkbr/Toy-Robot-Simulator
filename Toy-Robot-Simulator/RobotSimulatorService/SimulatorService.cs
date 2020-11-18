@@ -94,7 +94,6 @@
         private Queue<string> ValidCommandSequence(string commands)
         {
             var commandQueue = new Queue<string>(commands.ToUpper().Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray());
-            commandQueue.Enqueue(Command.REPORT.ToString());
 
             while (!commandQueue.Peek().Equals(Command.PLACE.ToString()))
             {
