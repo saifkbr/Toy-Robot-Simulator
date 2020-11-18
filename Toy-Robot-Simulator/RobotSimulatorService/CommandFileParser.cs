@@ -15,7 +15,9 @@
         {
             List<string> commands = new List<string>();
 
-            if (!string.IsNullOrWhiteSpace(setOfCompleteCommands))
+            if (!string.IsNullOrWhiteSpace(setOfCompleteCommands) &&
+                setOfCompleteCommands.Contains(Command.PLACE.ToString()) &&
+                setOfCompleteCommands.Contains(Command.REPORT.ToString()))
             {
                 commands = setOfCompleteCommands.Split(Command.REPORT.ToString(), StringSplitOptions.RemoveEmptyEntries).ToList();
             }

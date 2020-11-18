@@ -10,7 +10,7 @@
         [InlineData(@"Resources.Commands1.txt", 3)]
         [InlineData(@"Resources.Commands2.txt", 1)]
         [InlineData(@"Resources.Commands3.txt", 0)]
-        [InlineData(@"Resources.Commands4.txt", 1)]
+        [InlineData(@"Resources.Commands4.txt", 0)]
         public async System.Threading.Tasks.Task ProcessReadAsync_ShouldReturn_ListOfCommandsAsync(string filename, int setOfIndividualCommands)
         {
             ICommandFileParser parser = new CommandFileParser();
